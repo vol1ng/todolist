@@ -5,7 +5,7 @@ const listElement = document.getElementById("list");
 const notes = JSON.parse(localStorage.getItem("notes")) || [];
 
 createBtn.addEventListener("click", () => {
-  if (inputELement.value === "") {
+  if (inputELement.value.trim().length < 1) {
     return;
   }
   const newNote = { title: inputELement.value, completed: false };
